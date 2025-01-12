@@ -17,7 +17,7 @@ public class B10813 {
 		int arr[] = new int[N];
 		int temp;
 		
-		for(int i=0;i<M;i++) {
+		for(int i=0;i<N;i++) {
 			arr[i] = i+1;
 		}
 		for(int i=0;i<M;i++) {
