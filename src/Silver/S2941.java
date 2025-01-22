@@ -3,7 +3,6 @@ package Silver;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class S2941 {
 
@@ -12,11 +11,19 @@ public class S2941 {
 		String S = br.readLine();
 		String cro[] = {"c=","c-","dz=","d-","lj","nj","s=","z="};
 		int cnt = 0;
-		
 		for(int i=0;i<S.length();i++) {
+			for(String pattern:cro) {
+				if(i+pattern.length() <= S.length()
+						&& S.substring(i,i+pattern.length()).equals(pattern)) {
+					i += pattern.length()-1;
+					break;
+					
+				}
+			}
+			cnt++;
 			
 		}
-		
+		System.out.println(cnt);
 	}
 
 }
